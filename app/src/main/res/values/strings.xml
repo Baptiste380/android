@@ -1,3 +1,8 @@
 <resources>
+    <!-- Page d'accueil -->
+
     <string name="app_name">L\'Ecole des Loustics</string>
+    <string name="accueil_text1">Apprendre n"a jamais été aussi facile</string>
+    <string name="accueil_bouton1">Mode Invité</string>
+    <string name="accueil_bouton2">Inscription</string>
 </resources>
