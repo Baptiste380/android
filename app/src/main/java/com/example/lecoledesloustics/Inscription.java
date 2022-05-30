@@ -4,7 +4,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-
+/*
 public class Inscription {
 
 }
@@ -31,3 +31,4 @@ public void onClick(View v) {
         startActivity(i);
         }
         });
+*/

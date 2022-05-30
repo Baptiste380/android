@@ -37,7 +37,7 @@ public class UsersAdapter extends ArrayAdapter<User> {
         final View rowView = inflater.inflate(R.layout.template_user, parent, false);
 
         // Récupération des objets graphiques dans le template
-        TextView textViewTask = (TextView) rowView.findViewById(R.id.textNameUser);
+        TextView textViewTask = (TextView) rowView.findViewById(R.id.text_name_user);
 
         //
         textViewTask.setText(user.getName());

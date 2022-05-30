@@ -26,7 +26,7 @@ public class CreateAccount extends AppCompatActivity {
 
         db = DatabaseClient.getInstance(getApplicationContext());
 
-        editTextNameInput = findViewById(R.id.editTextNameInput);
+        editTextNameInput = findViewById(R.id.inscription_nom);
         createButton = findViewById(R.id.createButton);
 
         createButton.setOnClickListener(new View.OnClickListener() {
@@ -56,9 +56,7 @@ public class CreateAccount extends AppCompatActivity {
 
             @Override
             protected void onPostExecute(User user) {
-
             }
-
         }
 
         SaveUser su = new SaveUser();

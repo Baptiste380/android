@@ -1,88 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Accueil"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
+    <!-- Here you put the rest of your current view-->
 
-    <ImageView
-        android:id="@+id/accueil_image1"
-        android:layout_width="wrap_content"
-        android:layout_height="212dp"
-        android:src="@drawable/image" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="casual"
-        android:gravity="center_horizontal"
-        android:text="L'Ecole des Loustics"
-        android:textAlignment="center"
-        android:textSize="32dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        >
-
-    <ImageView
-        android:id="@+id/accueil_image2"
-        android:layout_width="81dp"
-        android:layout_height="77dp"
-        android:src="@drawable/ampoule"/>
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/accueil_text1"
-            android:layout_gravity="center"
-            />
-
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Accueil">
 
         <ImageView
-            android:id="@+id/accueil_image3"
-            android:layout_width="81dp"
-            android:layout_height="77dp"
-            android:src="@drawable/ampoule" />
+            android:id="@+id/accueil_image1"
+            android:layout_width="wrap_content"
+            android:layout_height="212dp"
+            android:src="@drawable/image" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:gravity="center_horizontal"
+            android:text="L'Ecole des Loustics"
+            android:textAlignment="center"
+            android:textSize="32dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/accueil_image2"
+                android:layout_width="81dp"
+                android:layout_height="77dp"
+                android:src="@drawable/ampoule" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/accueil_text1" />
+
+
+            <ImageView
+                android:id="@+id/accueil_image3"
+                android:layout_width="81dp"
+                android:layout_height="77dp"
+                android:src="@drawable/ampoule" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/accueil_bouton1" />
+
+            <Button
+                android:id="@+id/inscription_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:onClick="page_inscription"
+                android:text="@string/accueil_bouton2" />
+        </LinearLayout>
+
+
     </LinearLayout>
 
-    <Button
-        android:id="@+id/accueil_compte"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:text="Krebs Thomas"
-        />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center"
-        >
-
-        <Button
-            android:id="@+id/button1"
-            android:layout_height="match_parent"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/accueil_bouton1"
-            />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:text="@string/accueil_bouton2"
-            android:onClick="page_inscription"/>
-    </LinearLayout>
-
-
-
-</LinearLayout>
+</ScrollView>

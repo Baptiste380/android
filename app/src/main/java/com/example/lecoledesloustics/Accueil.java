@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.RelativeLayout;
-
+/*
 public class Accueil {
     btninsert = (Button)findViewById(R.id.createButton);
     btninsert.setOnClickListener( new View.OnClickListener() {
@@ -32,3 +32,4 @@ public class Accueil {
             helloView.setText("Hello " +prenomView.getText());
         }
     }
+*/

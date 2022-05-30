@@ -6,7 +6,7 @@
     android:padding="7dp">
 
     <Button
-        android:id="@+id/accueil_compte_button"
+        android:id="@+id/text_name_user"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
