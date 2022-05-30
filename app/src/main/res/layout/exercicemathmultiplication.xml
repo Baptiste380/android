@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Exercice5Activity">
+    tools:context=".ExerciceMath">
 
     <TextView
         android:id="@+id/ex5_titre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/choisis_ta_table_de_multiplication"
+        android:text="@string/exercicemathmultiplication1"
         android:gravity="center"
         android:textSize="20dp"
         android:layout_margin="5dp">
@@ -22,7 +22,6 @@
         android:id="@+id/ex5_numberPicker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
     </NumberPicker>
 
     <Button
