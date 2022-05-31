@@ -19,7 +19,7 @@
     </TextView>
 
     <NumberPicker
-        android:id="@+id/ex5_numberPicker"
+        android:id="@+id/numberPicker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
