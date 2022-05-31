@@ -5,13 +5,13 @@
     android:orientation="vertical"
     android:padding="7dp">
 
-    <Button
+    <TextView
         android:id="@+id/text_name_user"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Sample Text"
-        />
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#FFFFFF" />
 
 
 </LinearLayout>

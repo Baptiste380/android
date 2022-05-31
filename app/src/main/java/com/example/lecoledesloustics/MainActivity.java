@@ -10,11 +10,13 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     private UsersAdapter adapter;
     private ListView listUser;
     private Button registerButton;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,17 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, CreateAccount.class );
                 startActivity(intent);
             }
+        });
+
+        listUser.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                User user = adapter.getItem(position);
+                Toast.makeText(MainActivity.this, "Connected as " + user.getName() , Toast.LENGTH_SHORT).show();
+                AccountManager.getInstance().setValue(user.getName());
+            }
+
         });
 
     }

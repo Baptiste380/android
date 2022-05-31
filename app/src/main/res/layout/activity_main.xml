@@ -59,7 +59,7 @@
         <ListView
             android:id="@+id/listUser"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="144dp"
             android:layout_alignParentTop="true"
             android:orientation="vertical" />
 

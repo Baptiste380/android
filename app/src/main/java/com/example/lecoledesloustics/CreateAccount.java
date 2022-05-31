@@ -8,9 +8,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+
 
 import com.example.lecoledesloustics.db.User;
 import com.example.lecoledesloustics.db.DatabaseClient;
+
+import org.w3c.dom.Text;
 
 public class CreateAccount extends AppCompatActivity {
 
@@ -35,6 +39,7 @@ public class CreateAccount extends AppCompatActivity {
                 createUser();
             }
         });
+
     }
 
     private void createUser() {
@@ -56,6 +61,9 @@ public class CreateAccount extends AppCompatActivity {
 
             @Override
             protected void onPostExecute(User user) {
+                super.onPostExecute(user);
+                setResult(RESULT_OK);
+                finish();
             }
         }
 

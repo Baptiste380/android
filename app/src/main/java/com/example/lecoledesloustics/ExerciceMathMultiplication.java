@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.NumberPicker;
-
+/*
 public class ExerciceMathMultiplication extends AppCompatActivity {
 
     @Override
@@ -33,3 +33,5 @@ public class ExerciceMathMultiplication extends AppCompatActivity {
         startActivity(intent);
     }
 }
+
+ */
