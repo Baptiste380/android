@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     private UsersAdapter adapter;
     private ListView listUser;
     private Button registerButton;
-    private static final int REQUEST_CODE_ADD = 0;
 
 
     @Override

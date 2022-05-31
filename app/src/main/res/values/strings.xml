@@ -10,5 +10,6 @@
     <string name="inscription_bouton1">Créer mon compte</string>
 
     <string name="exercicemath1">Que souhaites-tu réviser ?</string>
+    <string name="choisis_ta_table_de_multiplication">"Choisit la table de multiplication "</string>
 
 </resources>
