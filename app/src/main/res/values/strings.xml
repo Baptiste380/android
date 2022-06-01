@@ -13,7 +13,7 @@
     <string name="choisis_ta_table_de_multiplication">"Choisit la table de multiplication "</string>
 
     <string name="exercicemathmultiplication1">Choisis ta table de multiplication :</string>
-
+    <string name="activity_choix_phrase">Quelle matière veux-tu étudier ?</string>
 
 
 </resources>
