@@ -37,14 +37,6 @@ public class MainActivity extends AppCompatActivity {
         listUser.setAdapter(adapter);
         registerButton = findViewById(R.id.inscription_button);
 
-        registerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CreateAccount.class );
-                startActivity(intent);
-            }
-        });
-
         listUser.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
@@ -56,6 +48,11 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+    }
+
+    public void pageInscription(View view) {
+        Intent intent = new Intent(MainActivity.this, CreateAccount.class );
+        startActivity(intent);
     }
 
     private void getUsers() {

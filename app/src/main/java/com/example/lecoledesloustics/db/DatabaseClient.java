@@ -7,6 +7,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
+import java.io.File;
 import java.util.concurrent.Executors;
 
 public class DatabaseClient {
@@ -23,11 +24,12 @@ public class DatabaseClient {
         // Créer l'objet représentant la base de données de votre application
         // à l'aide du "Room database builder"
         // MyToDos est le nom de la base de données
-        appDatabase = Room.databaseBuilder(context, AppDatabase.class, "MyToDos").build();
+        appDatabase = Room.databaseBuilder(context, AppDatabase.class, "databb")
+                .build();
 
         ////////// REMPLIR LA BD à la première création à l'aide de l'objet roomDatabaseCallback
         // Ajout de la méthode addCallback permettant de populate (remplir) la base de données à sa création
-        //appDatabase = Room.databaseBuilder(context, AppDatabase.class, "MyToDos").addCallback(roomDatabaseCallback).build();
+        appDatabase = Room.databaseBuilder(context, AppDatabase.class, "databb").addCallback(roomDatabaseCallback).build();
     }
 
     // Méthode statique
@@ -53,9 +55,13 @@ public class DatabaseClient {
             super.onCreate(db);
 
             //
-            db.execSQL("INSERT INTO task (task, description) VALUES(\"tâche 1\", \"installer la librairie Room\");");
-            db.execSQL("INSERT INTO task (task, description) VALUES(\"tâche 2\", \" Créer DatabaseClient\");");
+            db.execSQL("INSERT INTO Matiere VALUES(1, 'Francais')");
+            db.execSQL("INSERT INTO Matiere VALUES(2, 'Math')");
 
+            db.execSQL("INSERT INTO Question VALUES(1, 'Francais')");
+            db.execSQL("INSERT INTO Question VALUES(2, 'Math')");
+
+            db.execSQL("INSERT INTO User VALUES(1, 'nomdeluser')");
         }
     };
 }
