@@ -13,5 +13,8 @@
     <color name="background">#43C0C9</color>
     <color name="orange">#F9C73D</color>
     <color name="blue">#66CFDB</color>
+    <color name="bluefonce">#003366</color>
+
+
 
 </resources>
