@@ -38,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:onClick="page_inscription"
+            android:onClick="pageExerciceFrancais"
             android:text="Le Français !" />
 
     </LinearLayout>
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical">
-
+<!--
         <ImageView
             android:id="@+id/activity_image2"
             android:layout_width="wrap_content"
@@ -56,14 +56,14 @@
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:src="@drawable/math" />
-
+-->
         <Button
             android:id="@+id/activity_math"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:onClick="page_inscription"
-            android:text="Les Mathématiques !" />
+            android:onClick="pageMathematique"
+            android:text="Les Mathématiques !"/>
 
     </LinearLayout>
 
