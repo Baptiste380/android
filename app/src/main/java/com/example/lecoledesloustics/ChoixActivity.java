@@ -2,6 +2,7 @@ package com.example.lecoledesloustics;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.NumberPicker;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,15 +18,15 @@ public class ChoixActivity extends AppCompatActivity {
         setContentView(R.layout.activity_choix);
     }
 
-    public void pageMathematique(View view) {
-       /* Toast.makeText(getApplicationContext(),"Choix Math",Toast.LENGTH_SHORT).show();*/
-        Intent intent = new Intent(ChoixActivity.this, ExerciceMathActivity.class );
+    public void mathClick(View v) {
+        Intent intent = new Intent(ChoixActivity.this, QuestionsActivity.class );
+        intent.putExtra("MATIERE", "Math");
         startActivity(intent);
     }
 
-    public void pageExerciceFrancais(View view) {
-        /* Toast.makeText(getApplicationContext(),"Choix Math",Toast.LENGTH_SHORT).show();*/
-        Intent intent = new Intent(ChoixActivity.this, ExerciceFrancaisActivity.class );
+    public void frClick(View v) {
+        Intent intent = new Intent(ChoixActivity.this, QuestionsActivity.class );
+        intent.putExtra("MATIERE", "Francais");
         startActivity(intent);
     }
 }

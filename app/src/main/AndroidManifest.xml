@@ -24,6 +24,7 @@
         <activity android:name=".ExerciceFrancaisActivity" />
         <activity android:name=".ErreurActivity" />
         <activity android:name=".FelicitationActivity" />
+        <activity android:name=".QuestionsActivity" />
     </application>
 
 </manifest>

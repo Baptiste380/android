@@ -38,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:onClick="pageExerciceFrancais"
+            android:onClick="frClick"
             android:text="Le Français !" />
 
     </LinearLayout>
@@ -62,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:onClick="pageMathematique"
+            android:onClick="mathClick"
             android:text="Les Mathématiques !"/>
 
     </LinearLayout>

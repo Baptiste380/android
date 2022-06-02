@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
                 User user = adapter.getItem(position);
                 Toast.makeText(MainActivity.this, "Connected as " + user.getName() , Toast.LENGTH_SHORT).show();
                 AccountManager.getInstance().setValue(user.getName());
+                Intent intent = new Intent(MainActivity.this, ChoixActivity.class );
+                startActivity(intent);
             }
 
         });

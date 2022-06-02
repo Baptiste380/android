@@ -24,12 +24,12 @@ public class DatabaseClient {
         // Créer l'objet représentant la base de données de votre application
         // à l'aide du "Room database builder"
         // MyToDos est le nom de la base de données
-        appDatabase = Room.databaseBuilder(context, AppDatabase.class, "databb")
+        appDatabase = Room.databaseBuilder(context, AppDatabase.class, "db3")
                 .build();
 
         ////////// REMPLIR LA BD à la première création à l'aide de l'objet roomDatabaseCallback
         // Ajout de la méthode addCallback permettant de populate (remplir) la base de données à sa création
-        appDatabase = Room.databaseBuilder(context, AppDatabase.class, "databb").addCallback(roomDatabaseCallback).build();
+        appDatabase = Room.databaseBuilder(context, AppDatabase.class, "db3").addCallback(roomDatabaseCallback).build();
     }
 
     // Méthode statique
@@ -58,10 +58,21 @@ public class DatabaseClient {
             db.execSQL("INSERT INTO Matiere VALUES(1, 'Francais')");
             db.execSQL("INSERT INTO Matiere VALUES(2, 'Math')");
 
-            db.execSQL("INSERT INTO Question VALUES(1, 'Francais')");
-            db.execSQL("INSERT INTO Question VALUES(2, 'Math')");
+            db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(1, '1+2', '3,4,5', 2)");
+            db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(2, '1+3', '4TRUE,5,6', 2)");
+            db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(3, '1+4', '1,5TRUE,9', 2)");
+            db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(4, 'Question FR 1', '3,4,5', 1)");
+            db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(5, 'Question FR 2', '4TRUE,5,6', 1)");
+            db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(6, 'Question FR 3', '1,5TRUE,9', 1)");
 
             db.execSQL("INSERT INTO User VALUES(1, 'nomdeluser')");
+
+            /*
+            private String name;
+            private String reponse;
+            private int matiere;
+             */
+
         }
     };
 }

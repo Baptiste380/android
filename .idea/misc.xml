@@ -26,6 +26,8 @@
         <entry key="app/src/main/res/layout/template_calcul.xml" value="0.27853260869565216" />
         <entry key="app/src/main/res/layout/template_user.xml" value="0.2015625" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21875" />
+        <entry key="app/src/main/res/layout/question_template.xml" value="0.28396739130434784" />
+        <entry key="app/src/main/res/layout/display_questions.xml" value="0.28396739130434784" />
       </map>
     </option>
   </component>

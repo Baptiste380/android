@@ -6,6 +6,7 @@ import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 @Entity(
         foreignKeys = {
@@ -41,6 +42,31 @@ public class Question implements Serializable {
     public void setName(String name) { this.name=name; }
 
     public String getReponse() { return reponse; }
+
+    public String[] getReponseArr() {
+        String[] rep = reponse.split(",");
+
+        for (String i : rep) {
+            if (i.contains("TRUE")) {
+                i = i.replace("TRUE", "");
+            }
+        }
+        return rep;
+    }
+
+    public String getValidReponse() {
+        String[] rep = reponse.split(",");
+        String validRep = "";
+
+        for (String i : rep) {
+            if (i.contains("TRUE")) {
+                i = i.replace("TRUE", "");
+                validRep = i;
+            }
+        }
+
+        return validRep;
+    }
 
     public void setReponse(String reponse) { this.reponse = reponse; }
 

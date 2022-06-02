@@ -12,7 +12,10 @@ import java.util.List;
 public interface QuestionDao {
 
     @Query("SELECT * FROM question")
-    List<User> getAll();
+    List<Question> getAll();
+
+    @Query("SELECT question.id, question.name, question.reponse, question.matiere FROM question,matiere where question.matiere = matiere.id and matiere.name = :mat")
+    List<Question> getQuestionbyMatiere(String mat);
 
     @Insert
     void insert(Question question);
