@@ -58,7 +58,7 @@ public class DatabaseClient {
             db.execSQL("INSERT INTO Matiere VALUES(1, 'Francais')");
             db.execSQL("INSERT INTO Matiere VALUES(2, 'Math')");
 
-            db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(1, '1+2', '3,4,5', 2)");
+            db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(1, '1+2', '3,4TRUE,5', 2)");
             db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(2, '1+3', '4TRUE,5,6', 2)");
             db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(3, '1+4', '1,5TRUE,9', 2)");
             db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(4, 'Question FR 1', '3,4,5', 1)");
