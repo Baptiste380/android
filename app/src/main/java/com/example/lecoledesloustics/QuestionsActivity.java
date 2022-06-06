@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.NumberPicker;
 import android.widget.TextView;
+import android.view.View;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +16,7 @@ import com.example.lecoledesloustics.db.Question;
 import com.example.lecoledesloustics.db.User;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class QuestionsActivity extends AppCompatActivity {
@@ -38,6 +40,27 @@ public class QuestionsActivity extends AppCompatActivity {
         adapter = new QuestionAdapter(this, new ArrayList<Question>());
         listQuestion.setAdapter(adapter);
 
+    }
+
+    public void validate(View v) {
+        List<Question> questionList;
+        HashMap<Integer,String> resultMap;
+
+        questionList = db.getAppDatabase().questionDao().getQuestionbyMatiere(matiere);
+        resultMap = adapter.getResultMap();
+        int score = 0;
+
+        int i = 0;
+        for (Question q : questionList) {
+            String userReponse;
+            userReponse = resultMap.get(i);
+            if (userReponse.equals(q.getValidReponse())) {
+                score += 1;
+            }
+            i++;
+        }
+
+        System.out.println(score);
     }
 
     private void getQuestions() {

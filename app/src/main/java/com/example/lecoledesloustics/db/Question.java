@@ -43,15 +43,18 @@ public class Question implements Serializable {
 
     public String getReponse() { return reponse; }
 
-    public String[] getReponseArr() {
+    public ArrayList<String> getReponseArr() {
         String[] rep = reponse.split(",");
+        ArrayList<String> parsed_rep = new ArrayList<String>();
 
         for (String i : rep) {
             if (i.contains("TRUE")) {
-                i = i.replace("TRUE", "");
+                parsed_rep.add(i.replace("TRUE", ""));
+            } else {
+                parsed_rep.add(i);
             }
         }
-        return rep;
+        return parsed_rep;
     }
 
     public String getValidReponse() {

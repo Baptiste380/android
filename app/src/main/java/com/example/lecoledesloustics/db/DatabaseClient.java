@@ -29,7 +29,7 @@ public class DatabaseClient {
 
         ////////// REMPLIR LA BD à la première création à l'aide de l'objet roomDatabaseCallback
         // Ajout de la méthode addCallback permettant de populate (remplir) la base de données à sa création
-        appDatabase = Room.databaseBuilder(context, AppDatabase.class, "db3").addCallback(roomDatabaseCallback).build();
+        appDatabase = Room.databaseBuilder(context, AppDatabase.class, "db3").addCallback(roomDatabaseCallback).allowMainThreadQueries().build();
     }
 
     // Méthode statique

@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:context=".QuestionsActivity">
 
@@ -17,8 +17,16 @@
             android:id="@+id/listQuestion"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+        />
+
+        <Button
+            android:id="@+id/validate_choix"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:onClick="validate"
+            android:text="Valider" />
 
     </LinearLayout>
 

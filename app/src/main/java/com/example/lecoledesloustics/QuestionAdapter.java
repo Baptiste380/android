@@ -9,15 +9,20 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 import com.example.lecoledesloustics.db.Question;
 
 public class QuestionAdapter extends ArrayAdapter<Question> {
 
+    private HashMap<Integer, String> resultMap;
+
     public QuestionAdapter(Context mCtx, List<Question> questionList) {
         super(mCtx, R.layout.question_template, questionList);
+        resultMap = new HashMap<>();
     }
 
     /**
@@ -28,6 +33,8 @@ public class QuestionAdapter extends ArrayAdapter<Question> {
      * @param parent
      * @return
      */
+
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
@@ -45,22 +52,38 @@ public class QuestionAdapter extends ArrayAdapter<Question> {
         //
         textViewTask.setText(question.getName());
 
-        String[] rep = question.getReponseArr();
+        ArrayList<String> rep;
+        rep = question.getReponseArr();
 
-        System.out.println(Arrays.toString(rep));
+        RadioGroup radioGroup;
+        radioGroup = rowView.findViewById(R.id.radioGroup_reponses);
 
         RadioButton elem0 = rowView.findViewById(R.id.rep0);
         RadioButton elem1 = rowView.findViewById(R.id.rep1);
-        RadioButton elem2 =  rowView.findViewById(R.id.rep2);
+        RadioButton elem2 = rowView.findViewById(R.id.rep2);
 
+        elem0.setText(rep.get(0));
+        elem1.setText(rep.get(1));
+        elem2.setText(rep.get(2));
 
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+        {
+            public void onCheckedChanged(RadioGroup group, int checkedId)
+            {
+                RadioButton b;
+                b = rowView.findViewById(checkedId);
 
-        elem0.setText(String.valueOf(Arrays.asList().indexOf(0)));
-        elem1.setText(String.valueOf(Arrays.asList().indexOf(1)));
-        elem2.setText(String.valueOf(Arrays.asList().indexOf(2)));
+                String text = b.getText().toString();
+                resultMap.put(position,text);
+            }
+        });
 
         //
         return rowView;
+    }
+
+    public HashMap<Integer,String> getResultMap() {
+        return resultMap;
     }
 
 }
