@@ -1,7 +1,9 @@
 package com.example.lecoledesloustics;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.NumberPicker;
 import android.view.View;
 
@@ -16,6 +18,10 @@ public class ChoixActivity extends AppCompatActivity {
 
         // On charge le XML pour créer l'arbre graphique
         setContentView(R.layout.activity_choix);
+        Button btn = findViewById(R.id.activity_francais);
+        Button btn2 = findViewById(R.id.activity_math);
+        btn.setBackgroundColor(Color.argb(255, 119, 197, 147));
+        btn2.setBackgroundColor(Color.argb(255, 221, 122, 61));
     }
 
     public void mathClick(View v) {

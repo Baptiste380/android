@@ -15,6 +15,7 @@ android:textSize="23dp"
 android:layout_gravity="center"
 android:layout_marginTop="15dp"
 android:layout_marginBottom="8dp"
+android:textStyle="bold"
 />
 
     <View
@@ -22,7 +23,7 @@ android:layout_marginBottom="8dp"
         android:layout_height="6dp"
         android:id="@+id/bordure"
         android:visibility="visible"
-        android:background="@color/purple_500"
+        android:background="@color/mauve"
         android:layout_marginBottom="25dp"/>
 
     <Button

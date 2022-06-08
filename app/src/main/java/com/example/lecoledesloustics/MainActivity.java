@@ -7,6 +7,7 @@ import com.example.lecoledesloustics.db.DatabaseClient;
 import com.example.lecoledesloustics.CreateAccount;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button btn = findViewById(R.id.inscription_button);
+        Button btn2 = findViewById(R.id.button1);
+        btn.setBackgroundColor(Color.argb(255, 119, 193, 197));
+        btn2.setBackgroundColor(Color.argb(255, 221, 214, 61));
 
         db = DatabaseClient.getInstance(getApplicationContext());
 
