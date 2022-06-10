@@ -21,13 +21,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".ChoixActivity" />
-        <activity android:name=".MultiplicationActivity" />
         <activity android:name=".MultiplicationActivityResponse" />
         <activity android:name=".ExerciceMathActivity" />
         <activity android:name=".ExerciceFrancaisActivity" />
         <activity android:name=".ErreurActivity" />
         <activity android:name=".FelicitationActivity" />
         <activity android:name=".QuestionsActivity" />
+        <activity android:name=".CreateAccount" />
     </application>
 
 </manifest>
