@@ -25,6 +25,7 @@
         <activity android:name=".FelicitationActivity" />
         <activity android:name=".QuestionsActivity" />
         <activity android:name=".CreateAccount" />
+        <activity android:name=".UserAccountActivity" />
     </application>
 
 </manifest>

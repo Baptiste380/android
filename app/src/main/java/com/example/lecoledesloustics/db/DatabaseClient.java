@@ -3,6 +3,7 @@ package com.example.lecoledesloustics.db;
 import android.content.Context;
 
 import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
@@ -24,12 +25,12 @@ public class DatabaseClient {
         // Créer l'objet représentant la base de données de votre application
         // à l'aide du "Room database builder"
         // MyToDos est le nom de la base de données
-        appDatabase = Room.databaseBuilder(context, AppDatabase.class, "db3")
+        appDatabase = Room.databaseBuilder(context, AppDatabase.class, "db9")
                 .build();
 
         ////////// REMPLIR LA BD à la première création à l'aide de l'objet roomDatabaseCallback
         // Ajout de la méthode addCallback permettant de populate (remplir) la base de données à sa création
-        appDatabase = Room.databaseBuilder(context, AppDatabase.class, "db3").addCallback(roomDatabaseCallback).allowMainThreadQueries().build();
+        appDatabase = Room.databaseBuilder(context, AppDatabase.class, "db9").addCallback(roomDatabaseCallback).allowMainThreadQueries().build();
     }
 
     // Méthode statique
@@ -82,23 +83,16 @@ public class DatabaseClient {
             db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(20, 'Il fait une ... étouffante', 'chaleure,challeure,chaleurTRUE', 1)");
 
             db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(21, 'Quel est la couleur du cheval blanc de Henri IV ?', 'rouge,blancTRUE,noir', 3)");
-            db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(22, 'Où est situé Prague ?', 'En Grèce, en France, En République-TchèqueTRUE', 3)");
-            db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(23, 'Durant quel siècle la révolution a t-elle eu lieu ?', '20ème, 13ème, 18èmeTRUE', 3)");
-            db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(24, 'Cléopâtre a gouverné au temps des pharaons', 'VraiTRUE,False', 3)");
+            db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(22, 'Où est situé Prague ?', 'En Grèce,en France,En République-TchèqueTRUE', 3)");
+            db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(23, 'Durant quel siècle la révolution a t-elle eu lieu ?', '20ème,13ème,18èmeTRUE', 3)");
             db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(25, 'Combien y a-t-il de continents ?', '3,5,7TRUE', 3)");
-            db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(26, 'Quel est le pays au nord de la France ?', '', 3)");
-            db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(27, 'Les romains se battaient avec :','La Suède, Le Japon, La Belgique', 3)");
-            db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(28, 'La bastille a été marqué par :', 'La préhistoire, La révoultionTRUE, Stéphane Plaza', 3)");
+            db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(28, 'La bastille a été marqué par :', 'La préhistoire,La révoultionTRUE,Stéphane Plaza', 3)");
             db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(29, 'La tour Eiffel est situé à : ', 'ParisTRUE,Londres,Madrid', 3)");
             db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(30, 'La France a été championne de football à :', '1 reprise,2 reprisesTRUE,3 reprises', 3)");
 
-            db.execSQL("INSERT INTO User VALUES(1, 'nomdeluser')");
+            db.execSQL("INSERT INTO User VALUES(1, 'Prenom1', 'Nom1')");
 
-            /*
-            private String name;
-            private String reponse;
-            private int matiere;
-             */
+            db.execSQL("INSERT INTO Score Values(1, 3,10, 2, 1)");
 
         }
     };

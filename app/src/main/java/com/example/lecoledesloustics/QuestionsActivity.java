@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.lecoledesloustics.db.DatabaseClient;
 import com.example.lecoledesloustics.db.Question;
 import com.example.lecoledesloustics.db.User;
+import com.example.lecoledesloustics.db.Score;
+import com.example.lecoledesloustics.db.Matiere;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -54,13 +56,27 @@ public class QuestionsActivity extends AppCompatActivity {
         for (Question q : questionList) {
             String userReponse;
             userReponse = resultMap.get(i);
-            if (userReponse.equals(q.getValidReponse())) {
-                score += 1;
+            // check if user reponse not null
+            if (userReponse != null) {
+                if (userReponse.equals(q.getValidReponse())) {
+                    score += 1;
+                }
             }
             i++;
         }
 
-        System.out.println(score);
+        Matiere matiereObj = db.getAppDatabase().matiereDao().getByName(matiere);
+        int numQuestions = questionList.size();
+
+        Score scoreObj = new Score();
+        scoreObj.setTotalScore(score);
+        scoreObj.setTotalQuestions(numQuestions);
+        scoreObj.setMatiere(matiereObj.getId());
+        scoreObj.setUser(AccountManager.getInstance().getId());
+        db.getAppDatabase().scoreDao().insert(scoreObj);
+
+        finish();
+
     }
 
     private void getQuestions() {
@@ -83,6 +99,8 @@ public class QuestionsActivity extends AppCompatActivity {
         GetQuestions gq = new GetQuestions();
         gq.execute();
     }
+
+
 
     @Override
     protected void onStart() {

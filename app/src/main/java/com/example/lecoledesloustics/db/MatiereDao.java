@@ -14,6 +14,9 @@ public interface MatiereDao {
     @Query("SELECT * FROM matiere")
     List<Matiere> getAll();
 
+    @Query("SELECT * FROM matiere where name= :name")
+    Matiere getByName(String name);
+
     @Insert
     void insert(Matiere matiere);
 

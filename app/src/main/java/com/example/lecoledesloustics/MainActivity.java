@@ -48,9 +48,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 User user = adapter.getItem(position);
-                Toast.makeText(MainActivity.this, "Connected as " + user.getName() , Toast.LENGTH_SHORT).show();
-                AccountManager.getInstance().setValue(user.getName());
-                Intent intent = new Intent(MainActivity.this, ChoixActivity.class );
+                Toast.makeText(MainActivity.this, "Connected as " + user.getFullName() , Toast.LENGTH_SHORT).show();
+                AccountManager.getInstance().setId(user.getId());
+                Intent intent = new Intent(MainActivity.this, UserAccountActivity.class );
                 startActivity(intent);
             }
 
@@ -78,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
                 adapter.clear();
                 adapter.addAll(users);
             }
-
         }
         GetUsers gu = new GetUsers();
         gu.execute();

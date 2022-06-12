@@ -13,13 +13,13 @@ public class AccountManager {
     private AccountManager() {
     }
 
-    private String val;
+    private int id;
 
-    public String getValue() {
-        return val;
+    public int getId() {
+        return id;
     }
 
-    public void setValue(String value) {
-        this.val = value;
+    public void setId(int id) {
+        this.id = id;
     }
 }

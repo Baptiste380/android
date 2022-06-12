@@ -3,31 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
     <!-- Here you put the rest of your current view-->
 
 
-    <LinearLayout
+    <ListView
+        android:id="@+id/listQuestion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:context=".QuestionsActivity">
+        android:layout_weight="5"
+        android:visibility="visible" />
 
-        <ListView
-            android:id="@+id/listQuestion"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-        />
-
-        <Button
-            android:id="@+id/validate_choix"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:onClick="validate"
-            android:text="Valider" />
-
-    </LinearLayout>
+    <Button
+        android:id="@+id/validate_choix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="validate"
+        android:text="Valider"
+        android:layout_weight="1"
+        android:visibility="visible" />
 
 </LinearLayout>

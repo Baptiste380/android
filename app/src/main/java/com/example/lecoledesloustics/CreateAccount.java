@@ -20,7 +20,8 @@ public class CreateAccount extends AppCompatActivity {
 
     private DatabaseClient db;
 
-    private EditText editTextNameInput;
+    private EditText firstNameInput;
+    private EditText lastNameInput;
     private Button createButton;
 
     @Override
@@ -30,7 +31,8 @@ public class CreateAccount extends AppCompatActivity {
 
         db = DatabaseClient.getInstance(getApplicationContext());
 
-        editTextNameInput = findViewById(R.id.inscription_nom);
+        firstNameInput = findViewById(R.id.inscription_prenom);
+        lastNameInput = findViewById(R.id.inscription_nom);
         createButton = findViewById(R.id.createButton);
 
         createButton.setOnClickListener(new View.OnClickListener() {
@@ -43,9 +45,10 @@ public class CreateAccount extends AppCompatActivity {
     }
 
     private void createUser() {
-        String name = editTextNameInput.getText().toString().trim();
+        String firstName = firstNameInput.getText().toString().trim();
+        String lastName = lastNameInput.getText().toString().trim();
 
-        if(name.isEmpty()) {
+        if(firstName.isEmpty() || lastName.isEmpty()) {
             return;
         }
 
@@ -54,7 +57,8 @@ public class CreateAccount extends AppCompatActivity {
             @Override
             protected User doInBackground(Void... voids) {
                 User u = new User();
-                u.setName(name);
+                u.setFirstName(firstName);
+                u.setLastName(lastName);
                 db.getAppDatabase().userDao().insert(u);
                 return u;
             }
