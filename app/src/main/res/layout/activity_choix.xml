@@ -22,14 +22,6 @@
         android:orientation="vertical"
         android:layout_marginBottom="20dp"
        >
-        <Button
-            android:id="@+id/activity_francais"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:onClick="frClick"
-            android:text="Le Français !"
-            />
 
         <ImageView
             android:id="@+id/activity_image1"
@@ -43,6 +35,7 @@
             android:src="@drawable/francais"
             />
 
+
     </LinearLayout>
 
     <LinearLayout
@@ -51,23 +44,31 @@
         android:gravity="center"
         android:orientation="vertical">
 
+
+        <Button
+            android:id="@+id/activity_francais"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:onClick="frClick"
+            android:text="Le Français"
+            />
+
         <Button
             android:id="@+id/activity_math"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:onClick="mathClick"
-            android:text="Les Mathématiques !"/>
+            android:text="Les Mathématiques"/>
 
-        <ImageView
-            android:id="@+id/activity_image2"
+        <Button
+            android:id="@+id/activity_histoire"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:src="@drawable/math"
+            android:onClick="histoireClick"
+            android:text="L'histoire - Géographie"
             />
 
 

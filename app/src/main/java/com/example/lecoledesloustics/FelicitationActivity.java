@@ -13,4 +13,14 @@ public class FelicitationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_felicitation);
     }
+
+    public void autreExercice(View v) {
+        Intent intent = new Intent(FelicitationActivity.this, ChoixActivity.class );
+        startActivity(intent);
+    }
+
+    public void retourAccueil(View v) {
+        Intent intent = new Intent(FelicitationActivity.this, MainActivity.class );
+        startActivity(intent);
+    }
 }

@@ -10,7 +10,7 @@
         <entry key="..\:/Users/Thomas/StudioProjects/android/app/src/main/res/layout/question_template.xml" value="0.31354166666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/android/app/src/main/res/layout/activity_choix.xml" value="0.17255434782608695" />
         <entry key="..\:/Users/User/AndroidStudioProjects/android/app/src/main/res/layout/activity_felicitation.xml" value="0.17255434782608695" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/android/app/src/main/res/layout/activity_main.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/android/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/android/app/src/main/res/layout/create_account.xml" value="0.17255434782608695" />
         <entry key="..\:/Users/User/AndroidStudioProjects/android/app/src/main/res/layout/display_questions.xml" value="0.17255434782608695" />
         <entry key="..\:/Users/User/AndroidStudioProjects/android/app/src/main/res/layout/exercice_francais_verbe.xml" value="0.17255434782608695" />
@@ -32,7 +32,6 @@
         <entry key="app/src/main/res/layout/create_account.xml" value="0.22" />
         <entry key="app/src/main/res/layout/display_questions.xml" value="0.2015625" />
         <entry key="app/src/main/res/layout/exercice_francais.xml" value="0.254981884057971" />
-        <entry key="app/src/main/res/layout/exercice_francais_verbe.xml" value="0.296195652173913" />
         <entry key="app/src/main/res/layout/exercice_math.xml" value="0.27853260869565216" />
         <entry key="app/src/main/res/layout/exercice_math_addition.xml" value="0.27853260869565216" />
         <entry key="app/src/main/res/layout/exercice_math_multiplication.xml" value="0.27853260869565216" />
@@ -44,7 +43,6 @@
         <entry key="app/src/main/res/layout/exercicemathmultiplication.xml" value="0.25" />
         <entry key="app/src/main/res/layout/inscription.xml" value="0.19583333333333333" />
         <entry key="app/src/main/res/layout/multiplication_activity.xml" value="0.27853260869565216" />
-        <entry key="app/src/main/res/layout/question_template.xml" value="0.21197916666666666" />
         <entry key="app/src/main/res/layout/template_calcul.xml" value="0.27853260869565216" />
         <entry key="app/src/main/res/layout/template_user.xml" value="0.2015625" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21875" />

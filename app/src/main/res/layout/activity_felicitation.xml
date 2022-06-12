@@ -13,14 +13,6 @@
 
     </TextView>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Choisir une autre table"
-        android:onClick="autreTable">
-
-    </Button>
 
     <Button
         android:layout_width="wrap_content"
@@ -28,6 +20,13 @@
         android:layout_gravity="center"
         android:text="Choisir un autre exercice"
         android:onClick="autreExercice">
+    </Button>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Revenir à l'accueil"
+        android:onClick="retourAccueil">
     </Button>
 </LinearLayout>

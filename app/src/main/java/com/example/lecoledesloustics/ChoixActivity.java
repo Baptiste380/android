@@ -20,8 +20,10 @@ public class ChoixActivity extends AppCompatActivity {
         setContentView(R.layout.activity_choix);
         Button btn = findViewById(R.id.activity_francais);
         Button btn2 = findViewById(R.id.activity_math);
+        Button btn3 = findViewById(R.id.activity_histoire);
         btn.setBackgroundColor(Color.argb(255, 119, 197, 147));
         btn2.setBackgroundColor(Color.argb(255, 221, 122, 61));
+        btn3.setBackgroundColor(Color.argb(255, 244, 234, 70));
     }
 
     public void mathClick(View v) {
@@ -33,6 +35,12 @@ public class ChoixActivity extends AppCompatActivity {
     public void frClick(View v) {
         Intent intent = new Intent(ChoixActivity.this, QuestionsActivity.class );
         intent.putExtra("MATIERE", "Francais");
+        startActivity(intent);
+    }
+
+    public void histoireClick(View v) {
+        Intent intent = new Intent(ChoixActivity.this, QuestionsActivity.class );
+        intent.putExtra("MATIERE", "Histoire");
         startActivity(intent);
     }
 }
