@@ -14,7 +14,7 @@ public interface QuestionDao {
     @Query("SELECT * FROM question")
     List<Question> getAll();
 
-    @Query("SELECT question.id, question.name, question.reponse, question.matiere FROM question,matiere where question.matiere = matiere.id and matiere.name = :mat order by RANDOM() LIMIT 10")
+    @Query("SELECT question.id, question.name, question.reponse, question.matiere FROM question,matiere where question.matiere = matiere.id and matiere.name = :mat order by RANDOM() LIMIT 7")
     List<Question> getQuestionbyMatiere(String mat);
 
     @Insert

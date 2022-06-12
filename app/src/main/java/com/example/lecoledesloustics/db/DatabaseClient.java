@@ -25,12 +25,12 @@ public class DatabaseClient {
         // Créer l'objet représentant la base de données de votre application
         // à l'aide du "Room database builder"
         // MyToDos est le nom de la base de données
-        appDatabase = Room.databaseBuilder(context, AppDatabase.class, "db10")
+        appDatabase = Room.databaseBuilder(context, AppDatabase.class, "db14")
                 .build();
 
         ////////// REMPLIR LA BD à la première création à l'aide de l'objet roomDatabaseCallback
         // Ajout de la méthode addCallback permettant de populate (remplir) la base de données à sa création
-        appDatabase = Room.databaseBuilder(context, AppDatabase.class, "db10").addCallback(roomDatabaseCallback).allowMainThreadQueries().build();
+        appDatabase = Room.databaseBuilder(context, AppDatabase.class, "db14").addCallback(roomDatabaseCallback).allowMainThreadQueries().build();
     }
 
     // Méthode statique
@@ -74,7 +74,7 @@ public class DatabaseClient {
             db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(11, 'Nous ... allé voir Mamie', 'sont,avons,sommesTRUE', 1)");
             db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(12, 'Qui ... encore du gâteau ?', 'veux,veutTRUE,veu', 1)");
             db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(13, 'Paul a donné les clefs ... Manon','àTRUE, a, as', 1)");
-            db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(14, 'Je vous présente mes ... pour mon retard', 'condoléances,excuseTRUE,fécilitations', 1)");
+            db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(14, 'Je vous présente mes ... pour mon retard', 'condoléances,excusesTRUE,fécilitations', 1)");
             db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(15, 'Bonjour ... le monde', 'tous,tou,toutTRUE', 1)");
             db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(16, 'Le renard a ... un écureuil', 'croquer,croquéTRUE,croquez', 1)");
             db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(17, 'Il est ... chercher une boisson', 'alléTRUE,aller,allée', 1)");
@@ -86,12 +86,11 @@ public class DatabaseClient {
             db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(22, 'Où est situé Prague ?', 'En Grèce,en France,En République-TchèqueTRUE', 3)");
             db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(23, 'Durant quel siècle la révolution a t-elle eu lieu ?', '20ème,13ème,18èmeTRUE', 3)");
             db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(25, 'Combien y a-t-il de continents ?', '3,5,7TRUE', 3)");
-            db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(28, 'La bastille a été marqué par :', 'La préhistoire,La révoultionTRUE,Stéphane Plaza', 3)");
+            db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(28, 'La bastille a été marqué par :', 'La préhistoire,La révolutionTRUE,Stéphane Plaza', 3)");
             db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(29, 'La tour Eiffel est situé à : ', 'ParisTRUE,Londres,Madrid', 3)");
             db.execSQL("INSERT INTO Question(id, name, reponse, matiere) VALUES(30, 'La France a été championne de football à :', '1 reprise,2 reprisesTRUE,3 reprises', 3)");
 
             db.execSQL("INSERT INTO User VALUES(1, 'Prenom1', 'Nom1')");
-
             db.execSQL("INSERT INTO Score Values(1, 3,10, 2, 1)");
 
         }

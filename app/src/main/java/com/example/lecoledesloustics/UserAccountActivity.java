@@ -44,7 +44,8 @@ public class UserAccountActivity extends AppCompatActivity {
     }
 
     public void back(View view) {
-        finish();
+        Intent i = new Intent(UserAccountActivity.this, MainActivity.class);
+        startActivity(i);
     }
 
     public void play(View view) {
