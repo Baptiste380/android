@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    tools:context=".ShowResultActivity"
+    >
+    <!-- Here you put the rest of your current view-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:text="Vous avez obtenu :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginVertical="20dp"
+        >
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:text="7"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            />
+
+
+        <TextView
+            android:id="@+id/total_questions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/jouer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Autre excercice"
+        android:backgroundTint="#016a40"
+        android:onClick="otherExercice"
+        android:visibility="visible" />
+
+
+    <Button
+        android:id="@+id/retour_acceuil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#016a40"
+        android:text="Retour au compte"
+        android:onClick="backToAccount"
+        android:visibility="visible" />
+
+</LinearLayout>

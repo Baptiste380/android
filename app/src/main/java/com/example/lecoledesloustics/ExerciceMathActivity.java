@@ -16,5 +16,6 @@ public class ExerciceMathActivity extends AppCompatActivity {
 
         // On charge le XML pour créer l'arbre graphique
         setContentView(R.layout.exercice_math);
+
     }
 }

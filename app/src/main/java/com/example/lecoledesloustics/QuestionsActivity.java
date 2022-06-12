@@ -80,7 +80,10 @@ public class QuestionsActivity extends AppCompatActivity {
             db.getAppDatabase().scoreDao().insert(scoreObj);
         }
 
-        finish();
+        Intent intent = new Intent(QuestionsActivity.this, ShowResultActivity.class);
+        intent.putExtra("totalScore", score);
+        intent.putExtra("totalQuestions", numQuestions);
+        startActivity(intent);
 
     }
 
