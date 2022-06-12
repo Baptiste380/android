@@ -58,6 +58,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void inviteMod(View view) {
+        AccountManager.getInstance().setId(0);
+        Intent intent = new Intent(MainActivity.this, UserAccountActivity.class );
+        startActivity(intent);
+    }
+
     public void pageInscription(View view) {
         Intent intent = new Intent(MainActivity.this, CreateAccount.class );
         startActivity(intent);

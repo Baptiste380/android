@@ -27,10 +27,12 @@ public class QuestionsActivity extends AppCompatActivity {
     private ListView listQuestion;
     private QuestionAdapter adapter;
     private String matiere;
+    List<Question> questionList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //questionList = new ArrayList<>();
         setContentView(R.layout.display_questions);
 
         Intent i = getIntent();
@@ -45,10 +47,9 @@ public class QuestionsActivity extends AppCompatActivity {
     }
 
     public void validate(View v) {
-        List<Question> questionList;
         HashMap<Integer,String> resultMap;
 
-        questionList = db.getAppDatabase().questionDao().getQuestionbyMatiere(matiere);
+
         resultMap = adapter.getResultMap();
         int score = 0;
 
@@ -56,6 +57,8 @@ public class QuestionsActivity extends AppCompatActivity {
         for (Question q : questionList) {
             String userReponse;
             userReponse = resultMap.get(i);
+            System.out.println("Question: " + userReponse);
+            System.out.println("Rep:" + q.getValidReponse());
             // check if user reponse not null
             if (userReponse != null) {
                 if (userReponse.equals(q.getValidReponse())) {
@@ -68,12 +71,14 @@ public class QuestionsActivity extends AppCompatActivity {
         Matiere matiereObj = db.getAppDatabase().matiereDao().getByName(matiere);
         int numQuestions = questionList.size();
 
-        Score scoreObj = new Score();
-        scoreObj.setTotalScore(score);
-        scoreObj.setTotalQuestions(numQuestions);
-        scoreObj.setMatiere(matiereObj.getId());
-        scoreObj.setUser(AccountManager.getInstance().getId());
-        db.getAppDatabase().scoreDao().insert(scoreObj);
+        if (AccountManager.getInstance().getId() > 0) {
+            Score scoreObj = new Score();
+            scoreObj.setTotalScore(score);
+            scoreObj.setTotalQuestions(numQuestions);
+            scoreObj.setMatiere(matiereObj.getId());
+            scoreObj.setUser(AccountManager.getInstance().getId());
+            db.getAppDatabase().scoreDao().insert(scoreObj);
+        }
 
         finish();
 
@@ -93,6 +98,7 @@ public class QuestionsActivity extends AppCompatActivity {
                 super.onPostExecute(questions);
                 adapter.clear();
                 adapter.addAll(questions);
+                questionList = questions;
             }
 
         }

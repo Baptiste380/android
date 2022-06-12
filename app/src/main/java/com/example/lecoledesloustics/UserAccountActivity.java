@@ -93,11 +93,27 @@ public class UserAccountActivity extends AppCompatActivity {
         gs.execute();
     }
 
+    protected void initUser() {
+        if (AccountManager.getInstance().getId() > 0) {
+            getUser();
+        } else {
+            userName.setText("invité");
+        }
+    }
+
+    protected void initScores() {
+        if (AccountManager.getInstance().getId() > 0) {
+            getScores();
+        } else {
+            adapter.clear();
+        }
+    }
+
     @Override
     protected void onStart() {
         super.onStart();
-        getUser();
-        getScores();
+        initUser();
+        initScores();
     }
 
 }
